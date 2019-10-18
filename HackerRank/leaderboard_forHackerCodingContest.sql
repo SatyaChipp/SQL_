@@ -22,6 +22,6 @@ SELECT h.hacker_id,h.name
               inner join hackers h
                       ON h.hacker_id = s. hacker_id
        WHERE  s.score = d.score
-       GROUP  BY h.hacker_id
+       GROUP  BY h.hacker_id, h.name
         HAVING Count(s.submission_id)>1
        ORDER  BY Count(s.submission_id) DESC, hacker_id ASC;
