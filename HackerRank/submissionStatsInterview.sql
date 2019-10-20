@@ -18,7 +18,8 @@ sumSubmissionStats as (
 )
 
 
-select c.contest_id, c.hacker_id, c.name, sum(total_submissions), sum(total_accepted_submissions), sum(total_views), sum(total_unique_views)
+select c.contest_id, c.hacker_id, c.name, sum(total_submissions), sum(total_accepted_submissions), sum(total_views), 
+sum(total_unique_views)
 from contests c
     inner join colleges co
     on co.contest_id = c.contest_id
